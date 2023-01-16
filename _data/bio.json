@@ -6,18 +6,15 @@
     "email": "montoyao@hawaii.edu",
     "website": "https://montoyaoa.github.io",
     "summary": "I am studying for a B.S. in Computer Engineering in the Electical and Computer Engineering Department at the University of Hawaii at Manoa. I expect to graduate in Spring, 2023.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "montoyaoa", "url": "http://github.com/montoyaoa" },
       { "network": "linkedin", "username": "oamontoya", "url": "http://linkedin.com/in/oamontoya" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Embedded Systems" },
+    { "name": "Arduino" },
+    { "name": "Computer Architecture" }
   ],
   "skills": [
     {
