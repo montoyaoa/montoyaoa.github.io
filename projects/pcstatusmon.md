@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: img/pcstatusmon-square.jpg
 title: "PC Status Monitor"
 date: 2021-09
 published: true
