@@ -17,22 +17,15 @@ summary: "I developed a device that would continuously monitor and display my co
   <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
 </div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continously scrolling display. 
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+The system consisted of:
+- A [Crystalfontz 480x128 3.9" Bar-Type EVE Display] (https://www.crystalfontz.com/product/cfaf480128a0039tna11-480x128-eve-1u-display)
+- A [Teensy 4.0] (https://www.pjrc.com/store/teensy40.html)
+- A custom PCB to hold the Teensy and display
 
-Here is some code that illustrates how we read values from the line sensors:
+I also built a simple console program to run on the host PC in C#. This program used the [OpenHardwareMonitor] (https://openhardwaremonitor.org/) API to collect sensor values and transmit them as serial values to the Teensy. The Teensy would then "unpack" the data and signal the display's EVE processor to update with the most recent readings.
 
-```cpp
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
-```
-
-You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
+In this project, I:
+- Applied object-oriented programming concepts I learned in the previous semester. Hardware sensors were represented as objects in a linked list.
+- Designed a custom PCB using EDA software. The Teensy was socketed for easy troubleshooting and power/data connections were shared, requiring only a single microUSB connection to function.
