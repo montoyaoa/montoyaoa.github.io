@@ -18,13 +18,13 @@ Having completed the Basic JavaScript portion of [freeCodeCamp](https://www.free
 - It is possible for a variable to have different type, not just value. For instance:
 ```
 function testFunction(a) {
-	let foo;
-  	if (a) {
-  		foo = "bar";
-  	} else {
-  	foo = 3;
-  	}
-  	return foo;
+let foo;
+if (a) {
+	foo = "bar";
+} else {
+	foo = 3;
+}
+return foo;
 }
 ```
 I could imagine both useful simplification of code as a result, as well as annoying debugging if used improperly. I'll be sure to keep this in mind.
