@@ -11,9 +11,7 @@ labels:
 summary: "I developed a device that would continuously monitor and display my computer's sensor readings."
 ---
 
-<div class="text-center p-4">
-  <img src="../img/pcstatusmon/pcstatusmon.jpg">
-</div>
+<img class="img-fluid" src="../img/pcstatusmon/pcstatusmon.jpg">
 
 I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continously scrolling display. 
 
