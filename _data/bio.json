@@ -23,17 +23,17 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub"]
+      "keywords": [ "Windows", "Ubuntu", "Git/GitHub"]
     }
   ],
   "education": [
     {
       "institution": "University of Hawaii at Manoa, Honolulu, HI",
-      "area": "Computer Engineering (expected Spring, 2018)",
+      "area": "Computer Engineering (expected Spring, 2023)",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "startDate": "2021-01",
       "endDate": "Present",
-      "courses": [
+      "courses": ["Object Oriented Programming", "Digitial Systems & Computer Design", "Computer Data Structures & Algorithms", "Cyber-Physical Systems", "Computer Architecture"
       ]
     },
     {
@@ -50,25 +50,26 @@
     {
       "company": "Spirent Communications",
       "position": "Hardware Engineering Intern",
-      "website": "",
+      "website": "https://www.spirent.com/",
       "startDate": "2022-06",
       "endDate": "2022-12",
-      "summary": "",
+      "summary": "Performed product validation and testing on 400GbE QSFP-DD test appliance",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Collected and analyzed link quality measurements of QSFP-DD/QSFP56 interconnects at various emphasis settings in order to achieve optimal performance",
+        "Completed transition of customer-facing Interconnect Support List to new, simpler to understand format, verifying the accuracy of 897 interconnect entries",
+        "Collected measurements of optical transciver link quality at elevated operating temperatures to determine effect on link stability and error rate"
       ]
     },
     {
       "company": "Leeward Community College",
       "position": "Mathematics Tutor",
-      "website": "",
+      "website": "https://www.leeward.hawaii.edu/mathlab",
       "startDate": "2020-01",
       "endDate": "2021-05",
-      "summary": "",
+      "summary": "Provide mathematics instruction ",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Provide individual instructional assistance and support for students in Algebra, Geometry, and Calculus using analogy, visual diagrams, and other teaching skills",
+        "Maintain records of tutoring duration and feedback surveys"
       ]
     },
     {
@@ -77,37 +78,10 @@
       "website": "",
       "startDate": "2013-04",
       "endDate": "2019-04",
-      "summary": "",
+      "summary": "Served as Radio Technician and Electronic Test Equipment Custodian",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Troubleshoot, diagnose, and repair faults on AN/WSC-6(V)7 SHF Satellite Communications Radios, AN/WSC-3(V)7,11,15,3A UHF Communications Radios, and other various communications and RADAR systems",
+        "Organizational-Level inventory manager of Electronic Test Equipment such as multimeters, oscilloscopes, and signal generators, responsible for inventory and calibration readiness. "
       ]
     }
   ],
