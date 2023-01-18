@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/pcstatusmon/pcstatusmon-square.jpg
 title: "PC Status Monitor"
-date: 2021-09
+date: 2021-09-01
 published: true
 labels:
   - Arduino
