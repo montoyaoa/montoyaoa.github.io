@@ -25,3 +25,4 @@ I also built a simple console program to run on the host PC in C#. This program 
 In this project, I:
 - Applied object-oriented programming concepts I learned in the previous semester. Hardware sensors were represented as objects in a linked list.
 - Designed a custom PCB using EDA software. The Teensy was socketed for easy troubleshooting and power/data connections were shared, requiring only a single microUSB connection to function.
+<img class="img-fluid" src="../img/pcstatusmon/pcb.png">
