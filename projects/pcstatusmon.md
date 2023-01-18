@@ -27,6 +27,7 @@ In this project, I:
 - Designed a custom PCB using EDA software. The Teensy was socketed for easy troubleshooting and power/data connections were shared, requiring only a single microUSB connection to function.
 
 [This is a link to the GitHub repo for the PC host program.](https://github.com/montoyaoa/sensorhost)
+
 [This is a link to the GitHub repo for the Teensy.](https://github.com/montoyaoa/sensordisplay)
 
 <img class="img-fluid" src="../img/pcstatusmon/pcb.png">
