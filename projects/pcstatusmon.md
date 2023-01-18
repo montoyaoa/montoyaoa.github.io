@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/pcstatusmon-square.jpg
+image: img/pcstatusmon/pcstatusmon-square.jpg
 title: "PC Status Monitor"
 date: 2021-09
 published: true
@@ -12,9 +12,7 @@ summary: "I developed a device that would continuously monitor and display my co
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
+  <img src="../img/pcstatusmon/pcstatusmon.jpg">
 </div>
 
 I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continously scrolling display. 
