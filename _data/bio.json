@@ -13,6 +13,7 @@
   },
   "interests": [
     { "name": "Embedded Systems" },
+    { "name": "Internet of Things" },
     { "name": "Arduino" },
     { "name": "Computer Architecture" }
   ],
@@ -23,7 +24,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Windows", "Ubuntu", "Git/GitHub"]
+      "keywords": [ "Windows", "Linux", "gcc", "Git/GitHub"]
     }
   ],
   "education": [
@@ -50,7 +51,7 @@
     {
       "company": "Spirent Communications",
       "position": "Hardware Engineering Intern",
-      "website": "https://www.spirent.com/",
+      "website": "https://www.spirent.com",
       "startDate": "2022-06",
       "endDate": "2022-12",
       "summary": "Performed product validation and testing on 400GbE QSFP-DD test appliance",
@@ -81,16 +82,22 @@
       "summary": "Served as Radio Technician and Electronic Test Equipment Custodian",
       "highlights": [
         "Troubleshoot, diagnose, and repair faults on AN/WSC-6(V)7 SHF Satellite Communications Radios, AN/WSC-3(V)7,11,15,3A UHF Communications Radios, and other various communications and RADAR systems",
-        "Organizational-Level inventory manager of Electronic Test Equipment such as multimeters, oscilloscopes, and signal generators, responsible for inventory and calibration readiness. "
+        "Organization-Level inventory manager of Electronic Test Equipment such as multimeters, oscilloscopes, and signal generators, responsible for inventory and calibration readiness. "
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "Dean's List",
+      "date": "2021-Present",
+      "awarder": "University of Hawaii at Manoa",
+      "summary": "Awarded to students completing the semester of at least 12 credits with a semester GPA of 3.5."
+    },
+    {
+      "title": "Dean's List",
+      "date": "2020-2021",
+      "awarder": "Leeward Community College",
+      "summary": "Awarded to students completing the semester of at least 6 credits with a semester GPA of 3.0, and cumulative GPA of 3.8."
     }
   ],
   "references": [
