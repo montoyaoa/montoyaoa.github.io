@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/efield/efield-square.png
+image: img/watchtower/watchtower-square.png
 title: "WatchTower"
 date: 2022-05-11
 published: true
@@ -13,7 +13,7 @@ labels:
 summary: "An IoT device that would alert beachgoers on surf conditions in the absence of a lifeguard."
 ---
 
-<img class="img-fluid" src="../img/efield/efield.png">
+<img class="img-fluid" src="../img/watchtower/watchtower.png">
 
 I built a program that would model how an electric field would reflect and transmit through multiple layers of dielectric materials. This was an extra credit assignment for my electromagnetics course, and greatly helped me understand the concepts and calculations of incident electric fields on dielectrics.
 
