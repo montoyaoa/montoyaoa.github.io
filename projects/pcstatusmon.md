@@ -20,6 +20,8 @@ The system consisted of:
 - A [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)
 - A custom PCB to hold the Teensy and display
 
+<img class="img-fluid" src="../img/pcstatusmon/pcb.png">
+
 I also built a simple console program to run on the host PC in C#. This program used the [OpenHardwareMonitor](https://openhardwaremonitor.org/) API to collect sensor values and transmit them as serial values to the Teensy. The Teensy would then "unpack" the data and signal the display's EVE processor to update with the most recent readings.
 
 In this project, I:
@@ -30,4 +32,4 @@ In this project, I:
 
 [This is a link to the GitHub repo for the Teensy.](https://github.com/montoyaoa/sensordisplay)
 
-<img class="img-fluid" src="../img/pcstatusmon/pcb.png">
+
