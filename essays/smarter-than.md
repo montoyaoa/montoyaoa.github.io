@@ -54,6 +54,7 @@ The top answer respects the asker with a short, but useful reply. Verbatim:
 >The conditional's code decrements `x`, while returning `x`'s original (not decremented) value, and then compares the original value with `0` using the `>` operator.
 >
 >**To better understand, the statement could be written as follows:**
+
 ```
 while( (x--) > 0 )
 ```
@@ -88,6 +89,7 @@ Now, we can combine this information into a "smart" question, by being more clea
 >Hello, I have found that gcc 9.30 c99 does not flag referencing an integer that has not been initialized as an error. In fact, the integer is returned with a value of 0. Is this expected behavior for gcc?
 >
 >Below is a program that reproduces this error. 
+
 ```
 #include <stdio.h>
 
@@ -101,6 +103,7 @@ int main()
     return 0;
 }
 ```
+
 >When run on [GDB Online](https://www.onlinegdb.com/), using gcc 9.3.0 c99, the output is `i=0`.
 
 When stated this way, the problem is easier to understand. The question was not about program *flow*, it was about an uninitialized variable. The example code is simplified and minimized to make the question clear. Full sentences with proper spelling and grammar are used, along with a specific question at the end. Information, such as the language and compiler are given. All of this serves to help quickly solve the problem.
