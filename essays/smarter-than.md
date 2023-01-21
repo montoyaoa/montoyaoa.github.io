@@ -23,6 +23,7 @@ The question text, verbatim:
 >After reading [Hidden Features and Dark Corners of C++/STL](http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20) on `comp.lang.c++.moderated`, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.
 >
 >Here's the code:
+
 ```
 #include <stdio.h>
 int main()
