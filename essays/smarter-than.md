@@ -4,9 +4,10 @@ type: essay
 title: "Are you smarter than a StackOverflow user?"
 # All dates must be YYYY-MM-DD format!
 date: 2022-10-20
-published: false
+published: true
 labels:
-  - Engineering
+  - StackOverflow
+  - Communication
 ---
 
 [Has you really been far even as decided to use even go want to look more like?](https://www.youtube.com/watch?v=wqTpHhaKtL8)
