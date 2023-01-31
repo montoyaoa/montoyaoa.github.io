@@ -16,7 +16,8 @@ An incomprehensible question can be frustrating and hard to read, much less pay 
 
 Because software engineers communicate primarily through text communications (well before COVID!), asking questions properly is an important communication skill to know. Additionally, one can take advantage of the knowledge of the global software development community. By approaching with a well-formed, coherent, and researched question, one shows respect for those answering the question, and minimizes confusing back-and-forth dialogue about what the actual question is.
 
-So, to begin, a "smart" question: [What is the "-->" operator in C++?](https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c)
+## So, to begin, a "smart" question:
+[What is the "-->" operator in C++?](https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c)
 
 The question text, verbatim:
 
