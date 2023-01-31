@@ -17,6 +17,7 @@ An incomprehensible question can be frustrating and hard to read, much less pay 
 Because software engineers communicate primarily through text communications (well before COVID!), asking questions properly is an important communication skill to know. Additionally, one can take advantage of the knowledge of the global software development community. By approaching with a well-formed, coherent, and researched question, one shows respect for those answering the question, and minimizes confusing back-and-forth dialogue about what the actual question is.
 
 ## So, to begin, a "smart" question:
+
 [What is the "-->" operator in C++?](https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c)
 
 The question text, verbatim:
@@ -63,7 +64,9 @@ while( (x--) > 0 )
 
 This reply to the question results from the asker asking a direct question: "What is the `-->` operator and where is it defined?". The answerer identifies the misunderstanding (those are *two separate operators*), and corrects the asker by providing an example. There are 29 answers in total to the question, with none containing snarky, gruff, or rude replies. Indeed, some answers go into further technical detail on why decrementing was preferred on older hardware, and even joke about decrementing faster by making the "arrow" larger.
 
-Next, here's the "not-so-smart" question: [How the following goto stament is not returning error?](https://stackoverflow.com/questions/75190915/how-the-following-goto-stament-is-not-returning-error)
+## Next, here's the "not-so-smart" question: 
+
+[How the following goto stament is not returning error?](https://stackoverflow.com/questions/75190915/how-the-following-goto-stament-is-not-returning-error)
 
 The question text, verbatim:
 
