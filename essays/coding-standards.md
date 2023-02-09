@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "snappy title"
+title: "Keeping track of spaces"
 # All dates must be YYYY-MM-DD format!
 date: 2023-02-08
 published: true
