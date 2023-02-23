@@ -23,11 +23,11 @@ In addition to styling, Bootstrap also provides functionality shortcuts, such as
 
 For instance, here is a page from the Bootstrap 5.0 documentation both with and without Bootstrap:
 
-<img src="../img/by-the-numbers/before.png">
+<img width="900" src="../img/by-the-numbers/before.png">
 
 By removing the references to Bootstrap's CSS, every HTML element is essentially reverted to its browser default version.
 
-<img src="../img/by-the-numbers/after.png">
+<img width="900" src="../img/by-the-numbers/after.png">
 
 ## Risks of using Bootstrap
 
