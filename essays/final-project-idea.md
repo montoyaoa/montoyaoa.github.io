@@ -17,15 +17,9 @@ labels:
 ## Approach
 Once a profile is created, other users can browse profiles based on the foods they prefer. These profiles also show upcoming harvest information, if available.
 
-Users can also 
+Users can also subscribe to notifications when the food they desire is available, and propose trades using the food they have available.
 
-Once a profile is created, others can browse the profiles filtered by specific tastes, capabilities, and goals to find compatible musicians to contact.
-
-Students can also set up notifications to find out automatically when a profile is created that satisfies criteria that they specify.
-
-Admins can monitor the site for inappropriate content, and create new categories of musical tastes, capabilities, and goals.
-
-Note: if you choose this idea for your final project, you cannot name it “Campus Jam”. Come up with a different name for your final project.
+Admins can monitor the site for inappropriate content, and create new categories of foods and exchange locations.
 
 Some mockup pages include:
 
@@ -33,18 +27,18 @@ Some mockup pages include:
 - User home page
 - Admin home page
 - User profile page.
-- Browse users by taste, ability, instrument, goals, etc.
+- Browse exchange locations
+- Browse foods
 
 ## Use case ideas
 Whether or not the following bullet points list all pages or not, the completed use case should show an end-to-end scenario of using the system.
 
-- New user goes to landing page, logs in, gets home page, sets up profile. (How do they learn how system works?)
+- New user goes to landing page, logs in, gets home page, sets up profile with location and foods available.
 - Admin goes to landing page, logs in, gets home page, edits site.
-- User goes to landing page, logs in, finds musicians with compatible interests, contacts them.
+- User goes to landing page, logs in, finds user offering particular food, contacts them.
 
 ## Beyond the basics
 After implementing the basic functionality, here are ideas for more advanced features:
 
-- Support the organization of jam sessions. Provide information on scheduled jam sessions, including location, time, musical type, desired capabilities, and organizer contact information.
-- Support a network of “who’s played with who”.
-- Support reviews of musicians.
+- Suggest recipes based on nearby available foods
+- Suggest food crops that could be grown based on demand and climate
