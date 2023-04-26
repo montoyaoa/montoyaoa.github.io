@@ -25,7 +25,7 @@ I wrote the code for this project during the summer between my sophomore and jun
 ## Working from an example
 Naturally, I didn't have much experience with programming displays using Arduino-like microcontrollers. I understood that doing so can be difficult and memory-intensive, so I looked for a display with a graphics library that could help me get started. I found the a display that would work for my purposes, and it came with a microcontroller-friendly graphics library.
 
-![](https://www.crystalfontz.com/images/products/CFAF480128A0039TNA11/CFAF480128A0-039TN-A1-1_Front_On.jpg)
+<img width="900" src="https://www.crystalfontz.com/images/products/CFAF480128A0039TNA11/CFAF480128A0-039TN-A1-1_Front_On.jpg">
 
 The display I chose was the [Crystalfontz 3.9\" Bar-Type EVE Display](https://www.crystalfontz.com/product/cfaf480128a0039tna11-480x128-eve-1u-display), [using the EVE display library.](https://github.com/crystalfontz/CFAF480128A0-039Tx-A1) Naturally, I downloaded the sample code and got to work testing it with the Teensy.
 
