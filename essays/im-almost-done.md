@@ -4,7 +4,7 @@ type: essay
 title: "I'm almost done! ...then what?"
 # All dates must be YYYY-MM-DD format!
 date: 2022-01-18
-published: true
+published: false
 labels:
   - Arduino
   - Embedded Systems
