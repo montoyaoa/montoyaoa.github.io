@@ -4,7 +4,7 @@ type: essay
 title: "Keeping track of spaces"
 # All dates must be YYYY-MM-DD format!
 date: 2023-02-08
-published: true
+published: false
 labels:
   - Javascript
 ---

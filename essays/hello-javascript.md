@@ -4,7 +4,7 @@ type: essay
 title: "Hello JavaScript!"
 # All dates must be YYYY-MM-DD format!
 date: 2022-01-16
-published: false
+published: true
 labels:
   - Javascript
 ---
