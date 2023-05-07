@@ -13,7 +13,7 @@ summary: "I developed a device that would continuously monitor and display my co
 
 <img class="img-fluid" src="../img/pcstatusmon/pcstatusmon.jpg">
 
-I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continously scrolling display. 
+I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continuously scrolling display. 
 
 The system consisted of:
 - A [Crystalfontz 480x128 3.9" Bar-Type EVE Display](https://www.crystalfontz.com/product/cfaf480128a0039tna11-480x128-eve-1u-display)

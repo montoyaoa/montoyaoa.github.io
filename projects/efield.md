@@ -4,7 +4,7 @@ type: project
 image: img/efield/efield-square.png
 title: "Electric Field Calculator"
 date: 2021-11-18
-published: true
+published: false
 labels:
   - C++
 summary: "I built a program that would model how an electric field would reflect and transmit through multiple layers of dielectric materials."
