@@ -25,7 +25,7 @@ For instance, here is a page from the Bootstrap 5.0 documentation both with and 
 
 <img width="900" src="../img/by-the-numbers/before.png">
 
-By removing the references to Bootstrap's CSS, every HTML element is essentially reverted to its browser default version.
+By removing the references to Bootstrap's CSS, every HTML element is essentially reverted to its browser default version. Note the plain, unformatted text and standard-looking links.
 
 <img width="900" src="../img/by-the-numbers/after.png">
 
