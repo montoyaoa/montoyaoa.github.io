@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Structuring better code | Osiel Montoya | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/montoyaoa.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Osiel Montoya | Professional Portfolio">
+    <meta property="og:url" content="https://montoyaoa.github.io/essays/structuring-better-code.html">
+    <meta property="og:title" content="Structuring better code | Osiel Montoya | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/montoyaoa.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Structuring better code | Osiel Montoya | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Osiel Montoya</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Structuring better code</h1>
+  <span class="date">26 Apr 2023</span>
+  <hr>
+  <p>I’m not a great programmer.</p>
+
+<p>This is to be expected, after all. I am, after all, relatively new to programming, much less true team-based software development. What would I possibly know and speak about authoritatively?</p>
+
+<p>Therefore, I can reflect on my past errors in software development and see where software design patterns could help me produce better code. From this I can improve in my future career.</p>
+
+<h2 id="the-project">The project</h2>
+
+<p>I will be describing the code I used for a summer project I made, showing the code I wrote for a scrolling sensor display. This project would poll the sensors built into a computer, collecting the readings and sending them over a USB connection to a Teensy microcontroller, which would then display those readings on a continuously scrolling display.</p>
+
+<p>I wrote the code for this project during the summer between my sophomore and junior years, when I transferred from Leeward Community College to the University of Hawaii at Manoa. I was excited to show off the concepts that I had learned in the Object-Oriented Programming class I had taken in that spring.</p>
+
+<h2 id="working-from-an-example">Working from an example</h2>
+<p>Naturally, I didn’t have much experience with programming displays using Arduino-like microcontrollers. I understood that doing so can be difficult and memory-intensive, so I looked for a display with a graphics library that could help me get started. I found a display that would work for my purposes, and it came with a microcontroller-friendly graphics library.</p>
+
+<p><img alt="A wide-format LCD display." width="900" src="https://www.crystalfontz.com/images/products/CFAF480128A0039TNA11/CFAF480128A0-039TN-A1-1_Front_On.jpg" /></p>
+
+<p>The display I chose was the <a href="https://www.crystalfontz.com/product/cfaf480128a0039tna11-480x128-eve-1u-display">Crystalfontz 3.9" Bar-Type EVE Display</a>, <a href="https://github.com/crystalfontz/CFAF480128A0-039Tx-A1">using the EVE display library.</a> Naturally, I downloaded the sample code and got to work testing it with the Teensy.</p>
+
+<p>Here was my first mistake. The sample code was useful in understanding how the graphics library worked, but I for the most part worked within the given example, rather than starting fresh. Not only did this make the final code confusing, the examples and library were too complex and confusing for me to really work with.</p>
+
+<p>Indeed, the main .ino file that holds the <code class="language-plaintext highlighter-rouge">setup()</code> and <code class="language-plaintext highlighter-rouge">loop()</code> code is filled with the boilerplate example code, which was more complex than I needed. I only really needed text and rectangles for my project, I didn’t need access to the more advanced animation and bitmap features. For example, out of the code snippet below, only two of the lines are actually mine:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void loop()
+{
+  //Get the current write pointer from the EVE
+  uint16_t FWo;
+  FWo = EVE_REG_Read_16(EVE_REG_CMD_WRITE);
+  //Keep track of the RAM_G memory allocation
+  uint32_t RAM_G_Unused_Start;
+  RAM_G_Unused_Start = 0;
+  while (1)
+  {
+    Sensor* sample;
+    recvWithStartEndMarkers();
+    FWo = Wait_for_EVE_Execution_Complete(FWo);
+    // Start the display list
+    FWo = EVE_Cmd_Dat_0(FWo,(EVE_ENC_CMD_DLSTART));
+    // Set the default clear color to black
+    FWo = EVE_Cmd_Dat_0(FWo, EVE_ENC_CLEAR_COLOR_RGB(0, 0, 0));
+    // Clear the screen - this and the previous prevent artifacts between lists
+    FWo = EVE_Cmd_Dat_0(FWo, EVE_ENC_CLEAR(1 /*CLR_COL*/, 1 /*CLR_STN*/, 1 /*CLR_TAG*/)); 
+</code></pre></div></div>
+
+<p>A solution to this would be using the design pattern of a <strong>Facade</strong>, where a simplified interface to complex library is provided. I could’ve written a simple interface that would set up and maintain an instance of the EVE library, providing access to only the text and rectangle primitives. My code could then call the graphics library though this simplified interface, making the code more minimal and easier to read.</p>
+
+<h2 id="a-really-really-long-constructor">A really, really, long constructor</h2>
+
+<p>Part of my plan involved creating <code class="language-plaintext highlighter-rouge">Sensor</code> objects, which would be stored in a linked list and updated over time. These <code class="language-plaintext highlighter-rouge">Sensor</code> objects could be of various types, storing sensor readings about the CPU, GPM or RAM of a computer. Here’s the constructor:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sensor::Sensor(char *newName, enum SensorType newSensorType, float newValue, int newOrderedSensorIndex, boolean newIsFirstCPUSensor, boolean newIsFirstGPUSensor, boolean newIsFirstRAMSensor){
+  strcpy(Name, newName);
+  sensorType = newSensorType;
+  Value = newValue;
+  OrderedSensorIndex = newOrderedSensorIndex;
+  isFirstCPUSensor = newIsFirstCPUSensor;
+  isFirstGPUSensor = newIsFirstGPUSensor;
+  isFirstRAMSensor = newIsFirstRAMSensor;
+  if(newOrderedSensorIndex &lt; 4){
+    isVisible = true;
+    xpos = (newOrderedSensorIndex)*(rectwidth+padding);
+  }
+  else{
+    isVisible = false;
+    xpos = LCD_WIDTH;
+  }
+}
+</code></pre></div></div>
+
+<p>See the problem? The constructor is really long, with Boolean arguments stating whether that sensor is the first of its respective type. Consider that at most, one of these Booleans will be true, and most of the time they will be false.</p>
+
+<p>This object is a good candidate for a Builder design pattern. In this design pattern, an object is built generically, with additional portions of the object built incrementally. So, a <code class="language-plaintext highlighter-rouge">Sensor</code> object could be built and initialized with a <code class="language-plaintext highlighter-rouge">SensorBuilder</code> class. The <code class="language-plaintext highlighter-rouge">SensorBuilder</code> class could also invoke a <code class="language-plaintext highlighter-rouge">makeFirst(sensorType)</code> function, which would set the appropriate field of the corresponding <code class="language-plaintext highlighter-rouge">Sensor</code> object Boolean true.</p>
+
+<h2 id="where-to-go-from-here">Where to go from here</h2>
+<p>From these examples I can conclude that better code structure can lead to more readable, reusable code. I intend to improve from this early code to become a better programmer.</p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

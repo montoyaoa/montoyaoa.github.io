@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="PC Status Monitor | Osiel Montoya | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/montoyaoa.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Osiel Montoya | Professional Portfolio">
+    <meta property="og:url" content="https://montoyaoa.github.io/projects/pcstatusmon.html">
+    <meta property="og:title" content="PC Status Monitor | Osiel Montoya | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/montoyaoa.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>PC Status Monitor | Osiel Montoya | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Osiel Montoya</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">PC Status Monitor</h1>
+ <p><img class="img-fluid" src="../img/pcstatusmon/pcstatusmon.jpg" /></p>
+
+<p>I built a PC Status Monitor device that would connect to a PC via USB to display hardware usage statistics and sensor readings on a a continuously scrolling display.</p>
+
+<p>The system consisted of:</p>
+<ul>
+  <li>A <a href="https://www.crystalfontz.com/product/cfaf480128a0039tna11-480x128-eve-1u-display">Crystalfontz 480x128 3.9” Bar-Type EVE Display</a></li>
+  <li>A <a href="https://www.pjrc.com/store/teensy40.html">Teensy 4.0</a></li>
+  <li>A custom PCB to hold the Teensy and display</li>
+</ul>
+
+<p><img class="img-fluid" src="../img/pcstatusmon/pcb.png" /></p>
+
+<p>I also built a simple console program to run on the host PC in C#. This program used the <a href="https://openhardwaremonitor.org/">OpenHardwareMonitor</a> API to collect sensor values and transmit them as serial values to the Teensy. The Teensy would then “unpack” the data and signal the display’s EVE processor to update with the most recent readings.</p>
+
+<p>In this project, I:</p>
+<ul>
+  <li>Applied object-oriented programming concepts I learned in the previous semester. Hardware sensors were represented as objects in a linked list.</li>
+  <li>Designed a custom PCB using EDA software. The Teensy was socketed for easy troubleshooting and power/data connections were shared, requiring only a single microUSB connection to function.</li>
+</ul>
+
+<p><a href="https://github.com/montoyaoa/sensorhost">This is a link to the GitHub repo for the PC host program.</a></p>
+
+<p><a href="https://github.com/montoyaoa/sensordisplay">This is a link to the GitHub repo for the Teensy.</a></p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
