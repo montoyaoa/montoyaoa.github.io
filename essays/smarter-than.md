@@ -25,25 +25,25 @@ The question text, verbatim:
 >After reading [Hidden Features and Dark Corners of C++/STL](http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20) on `comp.lang.c++.moderated`, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.
 >
 >Here's the code:
-
-```
-#include <stdio.h>
-int main()
-{
-    int x = 10;
-    while (x --> 0) // x goes to 0
-    {
-        printf("%d ", x);
-    }
-}
-```
-
+>
+>```
+>#include <stdio.h>
+>int main()
+>{
+>    int x = 10;
+>    while (x --> 0) // x goes to 0
+>    {
+>        printf("%d ", x);
+>    }
+>}
+>```
+>
 >Output:
-
-```
-9 8 7 6 5 4 3 2 1 0
-```
-
+>
+>```
+>9 8 7 6 5 4 3 2 1 0
+>```
+>
 >I'd assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?
 
 This question provides:
@@ -57,10 +57,10 @@ The top answer respects the asker with a short, but useful reply. Verbatim:
 >The conditional's code decrements `x`, while returning `x`'s original (not decremented) value, and then compares the original value with `0` using the `>` operator.
 >
 >**To better understand, the statement could be written as follows:**
-
-```
-while( (x--) > 0 )
-```
+>
+>```
+>while( (x--) > 0 )
+>```
 
 This reply to the question results from the asker asking a direct question: "What is the `-->` operator and where is it defined?". The answerer identifies the misunderstanding (those are *two separate operators*), and corrects the asker by providing an example. There are 29 answers in total to the question, with none containing snarky, gruff, or rude replies. Indeed, some answers go into further technical detail on why decrementing was preferred on older hardware, and even joke about decrementing faster by making the "arrow" larger.
 
@@ -94,21 +94,21 @@ Now, we can combine this information into a "smart" question, by being more clea
 >Hello, I have found that gcc 9.30 c99 does not flag referencing an integer that has not been initialized as an error. In fact, the integer is returned with a value of 0. Is this expected behavior for gcc?
 >
 >Below is a program that reproduces this error. 
-
-```
-#include <stdio.h>
-
-int main()
-{
-    goto a;
-    int i = 1;
-    a:
-    printf("i=%d", i);
-
-    return 0;
-}
-```
-
+>
+>```
+>#include <stdio.h>
+>
+>int main()
+>{
+>    goto a;
+>    int i = 1;
+>    a:
+>    printf("i=%d", i);
+>
+>    return 0;
+>}
+>```
+>
 >When run on [GDB Online](https://www.onlinegdb.com/), using gcc 9.3.0 c99, the output is `i=0`.
 
 When stated this way, the problem is easier to understand. The question was not about program *flow*, it was about an uninitialized variable. The example code is simplified and minimized to make the question clear. Full sentences with proper spelling and grammar are used, along with a specific question at the end. Information, such as the language and compiler are given. All of this serves to help quickly solve the problem.
