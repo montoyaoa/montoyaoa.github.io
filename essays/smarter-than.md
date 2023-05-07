@@ -78,7 +78,7 @@ To summarize the issues with this question:
 - Grammatical and spelling errors (English may not be the user's first language, but the question text is difficult to decipher regardless)
 - There is no code in the body of the question
 - Rather, the code is an imgur link to a screenshot of code and output!
-- Ther is an extraneous line (line 13) which is not necessary to reproduce the problem.
+- There is an extraneous line (line 13) which is not necessary to reproduce the problem.
 - There is no description of the specific compilation or execution environment. I saw in the screenshot that the code was written on [GDB Online](https://www.onlinegdb.com/), but there is no further information available about the exact compiler or flags used. 
 - I didn't notice this at first, but the question is tagged as both C and C++, but the asker does not specify which language the example code is written in. The screenshot does not include this information, either. With some trial and error I found that this code was written in C, as selecting C++ as the language in GDB Online causes a compilation error not shown in the screenshot.
 

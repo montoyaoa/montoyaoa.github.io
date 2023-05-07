@@ -71,6 +71,6 @@ These tests were run locally before being uploaded to GitHub. They are then run 
 ## Lessons learned
 In this project, I learned quite a bit about true team-based software engineering. I worked with other students of similar experience, and thus we could split the workload much more effectively. I gained experience in using React Bootstrap to design a website, Meteor and MongoDB in managing databases, and TestCafe in writing tests.
 
-[This is a link to the GitHub repo.](https://github.com/montoyaoa/EE371Calculator)
+[This is a link to the GitHub repo.](https://github.com/rio-connect/rio-connect)
 
 [This is a link to the GitHub.io page with more information on the project.](https://rio-connect.github.io/)
