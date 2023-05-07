@@ -22,29 +22,29 @@ Because software engineers communicate primarily through text communications (we
 
 The question text, verbatim:
 
->After reading [Hidden Features and Dark Corners of C++/STL](http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20) on `comp.lang.c++.moderated`, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.
->
->Here's the code:
->
->```
->#include <stdio.h>
->int main()
->{
->    int x = 10;
->    while (x --> 0) // x goes to 0
->    {
->        printf("%d ", x);
->    }
->}
->```
->
->Output:
->
->```
->9 8 7 6 5 4 3 2 1 0
->```
->
->I'd assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?
+>>After reading [Hidden Features and Dark Corners of C++/STL](http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20) on `comp.lang.c++.moderated`, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.
+>>
+>>Here's the code:
+>>
+>>```
+>>#include <stdio.h>
+>>int main()
+>>{
+>>    int x = 10;
+>>    while (x --> 0) // x goes to 0
+>>    {
+>>        printf("%d ", x);
+>>    }
+>>}
+>>```
+>>
+>>Output:
+>>
+>>```
+>>9 8 7 6 5 4 3 2 1 0
+>>```
+>>
+>>I'd assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?
 
 This question provides:
 - A source (with link) to the original source of this information
